@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Theme Made By www.w3schools.com - No Copyright -->
+    <title>The Design Niche Podcast</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel='stylesheet' href='https://unpkg.com/emoji.css/dist/emoji.min.css'>
+    <link rel="stylesheet" href="https://use.typekit.net/auy7uxg.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
+
+
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Add smooth scrolling to all links
+            $("a").on('click', function(event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function() {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+
+
+
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+    </script>
+
+
+    <style>
+        /*-------- TYPOGRAPHY --------*/
+
+        body {
+            background-color: #171717;
+            margin: -1.5em;
+
+
+        }
+
+
+        h1 {
+            font-size: 60px;
+            color: white;
+            font-weight: 600;
+            font-family: 'IBM Plex Serif', serif;
+
+        }
+
+
+
+        h2 {
+            font-size: 30px;
+            color: white;
+            font-weight: 600;
+            font-family: 'IBM Plex Serif', serif;
+
+        }
+
+
+        .date {
+            font-size: 12px;
+            color: #A1A1A1;
+            font-family: 'IBM Plex Sans', sans-serif;
+
+        }
+
+        .avatarh1 {
+            font-size: 20px;
+            color: white;
+            font-family: 'IBM Plex Sans', sans-serif;
+
+        }
+
+        .avatarh2 {
+            font-size: 14px;
+            color: #A1A1A1;
+            font-family: 'IBM Plex Sans', sans-serif;
+
+        }
+
+
+
+        p {
+            font-size: 18px;
+            color: #B8B8B8;
+            font-family: 'IBM Plex Sans', sans-serif;
+
+        }
+
+
+
+
+
+        .mini_caption {
+            font-size: 12px;
+            color: #7F7F7F;
+            font-family: 'IBM Plex Mono', monospace;
+            font-style: italic;
+            line-height: 20px;
+        }
+
+
+        h3 {
+            font-size: 30px;
+            color: #B8B8B8;
+            font-family: 'IBM Plex Sans', sans-serif;
+
+
+        }
+
+
+
+        .line {
+            border: solid #7F7F7F .5px;
+        }
+
+
+
+
+        .container {
+            text-align: center!important;
+        }
+
+
+
+
+
+
+        /*--------- BUTTONS ---------*/
+
+        .btn_mini {
+            position: relative;
+            top: 0;
+            transition: top ease 0.4s;
+            background-color: #5800FF;
+            border-radius: 2px;
+            border: #5800FF solid 2px;
+            margin-right: 1em;
+            color: white;
+            padding: 8px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            font-family: 'IBM Plex Mono', monospace;
+            -webkit-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.3);
+            -moz-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.3);
+            transition: 0.4s;
+
+        }
+
+        .btn_mini:hover {
+            background-color: white;
+            border: white solid 2px;
+            color: black;
+            cursor: pointer;
+            top: -3px;
+        }
+
+
+
+
+
+
+
+
+
+
+        /*-------- PILLS --------*/
+
+        .pill {
+            background-color: #343434;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 12px;
+            border: none;
+            color: white;
+            padding: 6px 12px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            margin-right: 5px;
+            border-radius: 25px;
+            margin-bottom: 1em;
+
+
+        }
+
+
+        .pillsm {
+            background-color: #EFEFEF;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 12px;
+            border: none;
+            color: black;
+            padding: 6px 12px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            margin-right: 2px;
+            border-radius: 25px;
+
+
+        }
+
+
+
+
+        /*-------- HOMEPAGE STYLES --------*/
+
+        .rounded {
+            border-radius: 2px;
+            -webkit-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
+            -moz-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
+            width: 60px;
+
+        }
+
+
+
+
+
+
+
+        ul li {
+            font-size: 16px;
+            font-family: 'IBM Plex Sans', sans-serif;
+        }
+
+
+        .me {
+            width: 30%;
+            height: auto;
+        }
+
+
+        .graybg {
+
+            background-color: #FAFAFA;
+            padding: 5em;
+
+        }
+
+
+
+        strong {
+            font-weight: bold;
+        }
+
+        .row {
+            text-align: left;
+
+        }
+
+        .centered {
+            text-align: center;
+
+        }
+
+
+
+
+
+
+        /*-------- SPACERS --------*/
+
+        .lgspacer {
+            padding-top: 5em;
+
+        }
+
+        .smspacer {
+            padding-top: 2em;
+
+        }
+
+
+        .xsspacer {
+            padding-top: 1.5em;
+
+        }
+
+
+        .xxsspacer {
+            padding-top: 1em;
+
+        }
+
+
+
+        .xxxsspacer {
+            padding-top: .2em;
+
+        }
+
+
+        /*-------- SPACERS --------*/
+
+        p i {
+            padding-right: 10px;
+            color: #4d4d4d;
+        }
+
+
+        .figcap {
+            padding-top: 10px;
+            font-size: 12px;
+            font-weight: 400;
+            text-align: center;
+            color: dimgray;
+            font-family: 'IBM Plex Mono', monospace;
+
+        }
+
+        .topnav {
+            overflow: hidden;
+
+        }
+
+        .topnav a {
+            float: left;
+            color: black;
+            text-align: center;
+            padding-left: 2em;
+            padding-top: 1em;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+
+        ul li {
+            line-height: 35px;
+        }
+
+
+        /*-------- FOOTER ICON BAR --------*/
+
+        .icon {
+            font-size: 20px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+
+
+        .iconbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            align-content: center;
+
+        }
+
+        .iconbar i {
+            color: white;
+            transition: color .5s;
+        }
+
+        .iconbar i:hover {
+            color: dimgray;
+        }
+
+        
+        .col-md-12 {
+            margin-top: -10px;
+        }
+
+
+
+        /*-------STICKY NAV ---------*/
+
+        .topnav {
+            overflow: hidden;
+            background-color: #1E1E1E;
+        }
+
+        .topnav a {
+            float: left;
+            display: block;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 16px;
+            color: #7F7F7F;
+            font-family: 'IBM Plex Mono', monospace;
+        }
+
+        .topnav a:hover {
+            background-color: #292929;
+            color: white;
+            border-bottom: 3px solid #5800FF;
+        }
+
+        .topnav a.active {
+            background-color: #373737;
+            color: white;
+            border-bottom: 3px solid #5800FF;
+        }
+
+        .topnav .icon {
+            display: none;
+        }
+
+        @media screen and (max-width: 600px) {
+            .topnav a:not(:first-child) {
+                display: none;
+            }
+            .topnav a.icon {
+                float: right;
+                display: block;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .topnav.responsive {
+                position: relative;
+            }
+            .topnav.responsive .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            .topnav.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+        }
+
+
+
+        @media screen and (max-width: 770px) {
+            .content {
+                width: 90%;
+                margin: 0 auto;
+                margin-top: 5em;
+                margin-bottom: 10em;
+            }
+
+            .imagesize {
+                width: 100%;
+                height: auto;
+            }
+
+            .btn_mini {
+                margin-top: 1em;
+            }
+
+
+        }
+
+        @media screen and (min-width: 600px) {
+            .content {
+                width: 60%;
+                margin: 0 auto;
+                margin-top: 5em;
+                margin-bottom: 10em;
+            }
+        }
+
+        @media screen and (min-width: 1000px) {
+            .content {
+                width: 45%;
+                margin: 0 auto;
+                margin-top: 5em;
+                margin-bottom: 10em;
+            }
+        }
+
+    </style>
+
+
+
+</head>
+
+<body>
+
+
+    
+
+
+  
+
+
+
+
+
+
+    <span class="col-md-12"> 
+       
+  
+        
+        
+      
+        
+        
+   <div class="container ">
+       <div class="topnav" id="myTopnav">
+        <a href="#home" class="active"><i class="fas fa-microphone"></i> Podcast </a>
+        <a href="#about">About</a>
+        <a href="#contact"> Contact</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+    </div>
+       
+       <div class="smspacer"></div>
+       <div class="lgspacer"></div>
+        <div class="lgspacer"></div>
+
+        <div class="row centered">
+            
+            <span class="col-md-3"> 
+                
+            </span>
+
+    <span class="col-md-6"> 
+                    
+                <div class="smspacer"></div>
+                <h1>The Design <br> Niche Podcast</h1>
+                
+                
+
+
+            </span>
+
+    <span class="col-md-3"> 
+                
+            </span>
+
+    </div>
+
+    <div class="row centered">
+
+        <span class="col-md-2"> 
+                
+                    </span>
+
+        <span class="col-md-8"> 
+                   
+                   <h3>Learn how designers develop their passion, expertise, and niche in the world of design.</h3>
+                
+                <div class="smspacer"></div>
+
+                <a href="#section2"><button class="btn_mini">Listen now <i class="fas fa-arrow-down"></i></button></a> 
+                       
+                       
+                       
+                       
+                   </span>
+
+        <span class="col-md-2"> 
+                
+                    </span>
+
+
+    </div>
+
+
+
+    </div>
+
+    <div class="lgspacer"></div>
+    <div class="smspacer"></div>
+    <div class="lgspacer"></div>
+
+
+
+    <div class="container">
+
+
+
+
+        <hr class="line" id="section2">
+
+        <div class="xsspacer"></div>
+
+        <div class="row">
+
+            <span class="col-md-4"> 
+        
+        <span class="date">January 27th, 2020</span>
+            <h2>Becoming a creative self-starter while balancing the rest of your life.</h2>
+
+            </span>
+
+            <span class="col-md-1"> 
+        
+    </span>
+
+
+
+            <span class="col-md-7"> 
+        
+        <div class="row">
+            
+            <span class="col-md-2"> 
+            <img src="podcast_thumbnail.png" class="img-fluid rounded">
+            </span>
+
+
+            <span class="col-md-10"> 
+             <span class="avatarh1">Andrew Branch</span>
+            <br>
+            <span class="avatarh2">Design Director at Rev.com</span>
+            </span>
+
+
+
+        </div>
+
+
+
+
+
+
+
+        <div class="xsspacer"></div>
+        <p>Andrew works for a San Fransico start-up called Rev.com. He manages a fully remote design team while living in St. George, Utah. He also has many side project which include running a UX/PM Conference called Front, creating photography video content on YouTube, father of 5 kids, and mentor to many designers including myself.</p>
+
+
+
+        <div class="pill">Remote</div>
+        <div class="pill">Self-starter</div>
+        <div class="pill">Work-life-balance</div>
+
+        <div class="xsspacer"></div>
+
+        <audio controls>
+  <source src="horse.ogg" type="audio/ogg">
+  <source src="horse.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
+
+        </span>
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+    <div class="lgspacer"></div>
+    <div class="smspacer"></div>
+
+
+
+
+
+
+
+    <hr class="line">
+
+    <div class="xsspacer"></div>
+
+    <div class="row">
+
+        <span class="col-md-4"> 
+        
+        <span class="date">January 27th, 2020</span>
+        <h2>Learning to approach design problems through process.</h2>
+
+        </span>
+
+        <span class="col-md-1"> 
+        
+    </span>
+
+
+
+        <span class="col-md-7"> 
+        
+        <div class="row">
+            
+            <span class="col-md-2"> 
+            <img src="podcast_thumbnail.png" class="img-fluid rounded">
+            </span>
+
+
+        <span class="col-md-10"> 
+             <span class="avatarh1">Russell Parish</span>
+        <br>
+        <span class="avatarh2">Senior UX Designer at Intuitive</span>
+        </span>
+
+
+
+    </div>
+
+    <div class="xsspacer"></div>
+    <p>Russell is has had variety design experiences ranging from consulting at Minkley, IBM, SpaceX and now Intuitive. </p>
+
+
+
+    <div class="pill">Remote</div>
+    <div class="pill">Self-starter</div>
+    <div class="pill">Work-life-balance</div>
+
+    <div class="xsspacer"></div>
+
+    <audio controls>
+  <source src="horse.ogg" type="audio/ogg">
+  <source src="horse.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
+
+    </span>
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+    <div class="lgspacer"></div>
+    <div class="smspacer"></div>
+
+
+    <hr class="line" id="section2">
+
+    <div class="xsspacer"></div>
+
+    <div class="row">
+
+        <span class="col-md-4"> 
+        
+        <span class="date">January 27th, 2020</span>
+        <h2>Becoming a creative self-starter while balancing the rest of your life.</h2>
+
+        </span>
+
+        <span class="col-md-1"> 
+        
+    </span>
+
+
+
+        <span class="col-md-7"> 
+        
+        <div class="row">
+            
+            <span class="col-md-2"> 
+            <img src="podcast_thumbnail.png" class="img-fluid rounded">
+            </span>
+
+
+        <span class="col-md-10"> 
+             <span class="avatarh1">Andrew Branch</span>
+        <br>
+        <span class="avatarh2">Design Director at Rev.com</span>
+        </span>
+
+
+
+    </div>
+
+
+
+
+
+
+
+    <div class="xsspacer"></div>
+    <p>Andrew works for a San Fransico start-up called Rev.com. He manages a fully remote design team while living in St. George, Utah. He also has many side project which include running a UX/PM Conference called Front, creating photography video content on YouTube, father of 5 kids, and mentor to many designers including myself.</p>
+
+
+
+    <div class="pill">Remote</div>
+    <div class="pill">Self-starter</div>
+    <div class="pill">Work-life-balance</div>
+
+    <div class="xsspacer"></div>
+
+    <audio controls>
+  <source src="horse.ogg" type="audio/ogg">
+  <source src="horse.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
+
+    </span>
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+    <div class="lgspacer"></div>
+    <div class="smspacer"></div>
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+
+
+
+    </div>
+
+
+
+    </span>
+
+
+</body>
+
+
+
+
+
+
+<footer>
+
+
+    <div class="container">
+        <div class="iconbar">
+
+            <ul>
+
+
+
+                <a href="https://medium.com/@ottesenjacob1994" target="_blank"><i class="fab fa-medium icon"></i></a>
+                <a href="https://www.behance.net/ott1200693db" target="_blank"><i class="fab fa-behance icon"></i></a>
+                <a href="https://www.linkedin.com/in/jacobottesen/" target="_blank"><i class="fab fa-linkedin-in icon"></i></a>
+                <a href="https://dribbble.com/jakeottesen" target="_blank"><i class="fab fa-dribbble icon"></i></a>
+                <a href="mailto:ottesenjacob1994@gmail.com" target="_top"><i class="fas fa-envelope icon"></i></a>
+
+
+
+
+
+            </ul>
+
+
+            <div class="smspacer"></div>
+
+
+        </div>
+        <p class="figcap">&#169; 2020. Design and develop by Jacob Ottesen</p>
+
+    </div>
+    <div class="smspacer"></div>
+
+
+
+
+</footer>
+
+</html>
